@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #f5f5f5; /* Light gray text for readability against black */
+    background: url('background-texture.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background covers the screen without stretching too much */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black to blend with background */
+    color: #00d4ff; /* Bright cyan text for a pop of color */
+    padding: 50px 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1.2em;
+    color: #a0a0a0; /* Light gray for a softer contrast */
+}
+
+/* Profile Picture */
+#profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-left: 20px;
+    border: 3px solid #00d4ff; /* Cyan border to match the header text */
+}
+
+/* Base Section Styles */
+section {
+    padding: 20px 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Soft white glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    position: relative;
+    z-index: 10; 
+}
+
+/* Hover Effect */
+section:hover {
+    transform: scale(1.05); /* Slightly enlarges the section */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); /* More pronounced glow */
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque background */
+}
+
+section h2 {
+    color: #00d4ff; /* Cyan headers */
+    border-bottom: 2px solid #00d4ff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #f5f5f5;
+}
+
+ul li::before {
+    content: '•';
+    color: #00d4ff; /* Cyan bullet points */
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+}
+
+/* Slide-in Effect */
+.slide-in {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100px); /* Positioned off-screen to the left */
+    transition: all 0.8s ease-out; /* Smooth transition */
+}
+
+.slide-in.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to the final position */
+}
+/* Slide-out Effect */
+.slide-out {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100px); /* Positioned off-screen to the right */
+    transition: all 0.8s ease-out; /* Smooth transition */
+}
+
+.slide-in.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to the final position */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: #f5f5f5; /* Light gray text */
+    margin-top: 40px;
+}
+
+footer a {
+    color: #00d4ff; /* Cyan links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adjusted CSS for expanding section */
+.expandable {
+    position: relative;
+    overflow: hidden; /* Hide content until hover */
+    max-height: 120px; /* Initial height (collapsed state) */
+    transition: max-height 0.5s ease-in-out; /* Smooth expand/collapse */
+}
+
+.expandable:hover {
+    max-height: 800px; /* Adjust this value to fit all content, including images */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5); /* Enhance glow on hover */
+}
+
+.hidden-content {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.expandable:hover .hidden-content {
+    opacity: 1;
+    max-height: 600px; /* Adjust this value to fit all content */
+    padding-top: 20px;
+}
+
+.internship-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.internship-images img {
+    width: 48%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.10); /* Slightly larger */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+    }
+}
+
+/* Keyframes for floating effect */
+@keyframes floatingEffect {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(-5px); /* Move up slightly */
+    }
+    100% {
+        transform: translateY(0); /* Back to start position */
+    }
+}
+
+/* Apply animation to the name */
+.header-content .header-text h1  {
+    animation: pulseEffect 3s ease-in-out infinite, floatingEffect 4s ease-in-out infinite;
+}
+
+.header-content .header-text p  {
+    animation: pulseEffect 3s ease-in-out infinite, floatingEffect 4s ease-in-out infinite;
+}
+
+/* Robot styles */
+#robot {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 5s ease; /* Smooth transition */
+}
+
+#robot img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(calc(100vw - 10px), 0); /* Move right */
+    }
+    50% {
+        transform: translate(calc(100vw - 50px), calc(100vh - 50px)); /* Move down */
+    }
+    75% {
+        transform: translate(0, calc(100vh - 50px)); /* Move left */
+    }
+    100% {
+        transform: translate(0, 0); /* Move up */
+    }
+}

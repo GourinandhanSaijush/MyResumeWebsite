@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourinandhan Saijush - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1 id="name">Gourinandhan Saijush</h1>
+                <p>Robotics and Artificial Intelligence Engineer</p>
+            </div>
+            <img id="profile-picture" src="image.png" alt="Gourinandhan Saijush">
+        </div>
+    </header>
+    <section class="slide-in" id="about">
+        <h2>About Me</h2>
+        <p>Detail-oriented and ambitious engineering student with a passion for obtaining accurate results and working on a team. Seeking an entry-level position in the engineering industry to pursue a career as an Engineer and improve the skill set.</p>
+    </section>
+    <section class="slide-in" id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Bachelor of Engineering (2021-2025):</strong> Robotics and Artificial Intelligence Engineering, NMAM Institute of Technology, Nitte, Karnataka. (CGPA-7.58)</li>
+            <li><strong>Pre University College (2021):</strong> Science Stream (PCMB), Sri Chaitanya PU College, Mangalore, Karnataka (89 percentile)</li>
+            <li><strong>High School (2019):</strong> Dr. MRSM English Medium High School, Thokur, Mangalore (91 percentile)</li>
+        </ul>
+    </section>
+    <section class="slide-in" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Mathematical modelling and analytical skills in MATLAB</li>
+            <li>Development and implementation of control algorithms</li>
+            <li>Experience with robotic systems and PLCs</li>
+            <li>Programming: C, Python, MATLAB, Simulink, LabVIEW</li>
+            <li>Familiarity with CNC machining and 3D printing</li>
+            <li>Algorithm development and code modularity</li>
+            <li>Experience with IoT systems and communications</li>
+            <li>Microsoft Azure and Cloud Computing</li>
+            <li>AR/VR and Game Rendering with Unity</li>
+        </ul>
+    </section>
+    <section class="slide-in" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>IoT based Irrigation System (2021):</strong> Academic project</li>
+            <li><strong>NLP-based translator with Python (2022):</strong> INTEL AI Certification Project</li>
+            <li><strong>Arduino programmed RFID door locks (2023):</strong> Other project</li>
+            <li><strong>Sound syncing LED using 8051 Microcontroller (2023):</strong> Other project</li>
+        </ul>
+    </section>
+    <section class="slide-in expandable" id="internships">
+        <h2>Internships</h2>
+        <ul>
+            <li>
+                <strong>Volvo Group Truck Operations, Bangalore (March 2023):</strong> 
+                Data Analysis on Preventative Maintenance Calendar and Study on PLC applications
+            </li>
+        </ul>
+        <!-- Hidden content for detailed description and images -->
+        <div class="hidden-content">
+            <p>During my internship at Volvo Group, I worked on various projects related to preventative maintenance and PLC applications. I analyzed data trends and provided actionable insights to improve the maintenance schedules, leading to a significant reduction in downtime. Additionally, I explored the use of PLCs in various automation tasks and presented my findings to the team.</p>
+            <div class="internship-images">
+                <img src="image1.jpg" alt="Project Work 1">
+                <img src="image2.jpg" alt="Project Work 2">
+            </div>
+        </div>
+    </section>
+    <section class="slide-in" id="volunteer">
+        <h2>Volunteer Experience</h2>
+        <ul>
+            <li><strong>Branch Captain (2023):</strong> RISE - Robotics and Artificial Intelligence Society for Engineers, NMAMIT, Nitte</li>
+            <li><strong>Anti Ragging Committee Volunteer (2023):</strong> NMAMIT, Nitte</li>
+        </ul>
+    </section>
+    <section class="slide-in" id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Programming Fundamentals</li>
+            <li>C Programming Course</li>
+            <li>Python Programming Course</li>
+            <li>Introduction to Project Management</li>
+            <li>INTEL AI for Youth Program Project</li>
+            <li>IIT Guwahati Data Science with Python</li>
+            <li>MATLAB OnRamp</li>
+            <li>Simulink OnRamp</li>
+            <li>Soldering Electric Components Certification</li>
+            <li>Microsoft Azure Certifications</li>
+        </ul>
+    </section>
+    <section class="slide-in" id="languages">
+        <h2>Languages Known</h2>
+        <ul>
+            <li>English</li>
+            <li>Hindi</li>
+            <li>Malayalam</li>
+            <li>Tamil</li>
+            <li>Kannada</li>
+        </ul>
+    </section>
+    <footer>
+        <h2>Contact Information</h2>
+        <p>Phone: +91 8088395022</p>
+        <p>Email: <a href="mailto:gourinandhanrws@gmail.com">gourinandhanrws@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/gourinandhan-saijush-564798259" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/GourinandhanSaijush" target="_blank">GitHub Profile</a></p>
+        <p>Address: Flat 419, Matha Residency, Haleangadi, 574146, Karnataka,India</p>
+    </footer>
+
+    <div id="robot">
+        <img src="robot.gif" alt="Robot">
+    </div>
+
+    <script>
+        // JavaScript to handle the scroll effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all elements with the 'slide-in' class
+            const slideInSections = document.querySelectorAll('.slide-in');
+        
+            // Create an Intersection Observer to watch for the elements as they enter the viewport
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // Add 'visible' class to trigger animation
+                        observer.unobserve(entry.target); // Stop observing once it's animated
+                    }
+                });
+            }, { threshold: 0.1 }); // 0.1 means the animation triggers when 10% of the section is visible
+        
+            // Observe each section
+            slideInSections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all elements with the 'slide-in' class
+            const slideInSections = document.querySelectorAll('.slide-in');
+        
+            // Create an Intersection Observer to watch for the elements as they enter and leave the viewport
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // Add 'visible' class to trigger slide-in animation
+                        entry.target.classList.remove('slide-out'); // Remove slide-out class if present
+                    } else {
+                        entry.target.classList.add('slide-out'); // Add 'slide-out' class to trigger slide-out animation
+                        entry.target.classList.remove('visible'); // Remove visible class if present
+                    }
+                });
+            }, { threshold: 0.1 }); // 0.1 means the animation triggers when 10% of the section is visible
+        
+            // Observe each section
+            slideInSections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const robot = document.getElementById('robot');
+            const robotSize = 50; // Width and height of the robot
+        
+            function getRandomPosition() {
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+        
+                const x = Math.floor(Math.random() * (viewportWidth - robotSize));
+                const y = Math.floor(Math.random() * (viewportHeight - robotSize));
+        
+                return { x, y };
+            }
+        
+            function isOverlapping(x, y) {
+                const robotRect = { left: x, top: y, right: x + robotSize, bottom: y + robotSize };
+                const sections = document.querySelectorAll('section');
+                
+                for (const section of sections) {
+                    const rect = section.getBoundingClientRect();
+                    const overlap = !(rect.left > robotRect.right || 
+                                      rect.right < robotRect.left || 
+                                      rect.top > robotRect.bottom || 
+                                      rect.bottom < robotRect.top);
+                    if (overlap) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        
+            function moveRobot() {
+                let { x, y } = getRandomPosition();
+                while (isOverlapping(x, y)) {
+                    ({ x, y } = getRandomPosition());
+                }
+                robot.style.transform = `translate(${x}px, ${y}px)`;
+            }
+        
+            function randomMove() {
+                moveRobot();
+                setTimeout(randomMove, 6000); // Move every 6 seconds
+            }
+        
+            randomMove();
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const robot = document.getElementById('robot');
+            robot.style.top = '100px';
+            robot.style.left = '100px';
+        });
+        
+        </script>
+        
+    
+</body>
+</html>
