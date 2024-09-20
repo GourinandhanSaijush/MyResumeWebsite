@@ -36,12 +36,12 @@ header {
 
 /* Profile Picture */
 #profile-picture {
-    border-radius: 50%;
+    border-radius: 50%;  /* 50 percent is circle*/
     width: 150px;
     height: 150px;
     object-fit: cover;
     margin-left: 20px;
-    border: 3px solid #00d4ff; /* Cyan border to match the header text */
+    border: 2px solid #00d4ff; /* Cyan border to match the header text */
 }
 
 /* Base Section Styles */
@@ -168,6 +168,25 @@ footer a:hover {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Hide certificate images initially */
+.cert-image {
+    display: none;
+    width: 100%; /* Adjust as needed */
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 3s ease-in-out,opacity 1s ease-in-out;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Show the image when hovering over the certification item */
+.certification-item:hover .cert-image {
+    display: block;
+    opacity: 1; /* Fade-in effect */
+    transform: translateX(0);
 }
 
 /* Keyframes for pulsing effect */
