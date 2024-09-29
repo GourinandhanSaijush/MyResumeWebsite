@@ -189,6 +189,145 @@ footer a:hover {
     transform: translateX(0);
 }
 
+/* General styles for the profile section */
+#profiles {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Soft white glow */
+}
+
+/* Styles for list items */
+#profiles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#profiles ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Link style for regular profile links */
+#profiles ul li a {
+    color: #00d4ff; /* Bright cyan color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#profiles ul li a:hover {
+    color: #00aacc; /* Darker cyan on hover */
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Google Cloud Blue Button */
+.btn-google-cloud {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:rgba(66, 133, 244, 0.2); /* Google Cloud Blue */
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/* Hover effect for Google Cloud Button */
+.btn-google-cloud:hover {
+    background-color: #005A9E; /* Darker Blue on hover */
+}
+
+/* Microsoft Learn Blue Button */
+.btn-microsoft-learn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:rgba(66, 133, 244, 0.2); /* Microsoft Learn Blue */
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect for Microsoft Learn Button */
+.btn-microsoft-learn:hover {
+    background-color: #005A9E; /* Darker Blue on hover */
+}
+
+/* LinkedIn Button */
+.btn-linkedin {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:rgba(66, 133, 244, 0.2); /* Microsoft Learn Blue */
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative; /* Ensure proper layering */
+    z-index: 1; /* Bring the button text in front of any overlapping elements */
+}
+
+/* Hover effect for LinkedIn Button */
+.btn-linkedin:hover {
+    background-color: #005A9E; /* Darker blue on hover */
+}
+
+/* GitHub Button */
+.btn-github {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:rgba(66, 133, 244, 0.2); /* Microsoft Learn Blue */
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative; /* Ensure proper layering */
+    z-index: 1; /* Bring the button text in front of any overlapping elements */
+}
+
+/* Hover effect for GitHub Button */
+.btn-github:hover {
+    background-color:#005A9E; /* Darker gray on hover */
+}
+
+/* Unity Profile Button */
+.btn-unity {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:rgba(66, 133, 244, 0.2); /* Microsoft Learn Blue */
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative; /* Ensure proper layering */
+    z-index: 1; /* Bring the button text in front of any overlapping elements */
+}
+
+/* Hover effect for Unity Button */
+.btn-unity:hover {
+    background-color:#005A9E; /* Darker gray on hover */
+}
+
 /* Keyframes for pulsing effect */
 @keyframes pulseEffect {
     0% {
