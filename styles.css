@@ -2,7 +2,9 @@
 body {
     font-family: 'Arial', sans-serif;
     color: #f5f5f5; /* Light gray text for readability against black */
-    background: url('background-texture.jpg') no-repeat center center fixed;
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  /* dark overlay */
+        url('background-texture.jpg') no-repeat center center fixed;
     background-size: cover; /* Ensures the background covers the screen without stretching too much */
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
     margin: 0;
